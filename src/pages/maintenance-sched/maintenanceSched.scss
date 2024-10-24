@@ -1,3 +1,76 @@
-.maintenance{
-    background-color: red;
+
+
+.maintenance-container {
+    padding: 60px 40px; /* Match the increased top and bottom padding */
+    background-color: white; /* Change background to match transactions */
+    border-radius: 10px; /* Keep the border-radius for rounded corners */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow for depth */
+    font-family: 'Roboto', sans-serif;
+    max-width: 1400px; /* Increase to match transactions max-width */
+    width: 230%; /* Match the increased width */
+    height: 80vh; /* Match the height */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    margin: 40px auto; /* Center the box with space above and below */
+    transition: all 0.3s ease; /* Smooth transition for box-shadow adjustments */
+}
+
+h2 {
+    text-align: center;
+    color: maroon; /* Match text color */
+    font-size: 1.8rem; /* Keep the font size */
+    margin-bottom: 20px;
+}
+
+.schedule-table {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #e1e1e1;
+    margin-bottom: 20px; /* Adds space below the schedule table */
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #f0f0f0; /* Match header background to transactions */
+    color: maroon; /* Match text color */
+    font-weight: bold;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px; /* Keep padding inside each row */
+    border-bottom: 1px solid #e1e1e1;
+    align-items: center;
+    background-color: #fff;
+
+    &:nth-child(even) {
+        background-color: #f7f8fa; /* Keep alternating row color */
+    }
+
+    &:hover {
+        background-color: #e9eff5; /* Keep hover effect */
+    }
+
+    .date, .task, .status {
+        flex: 1;
+        text-align: center; /* Center text for all columns */
+        color: maroon; /* Match text color */
+    }
+}
+
+.upcoming .status {
+    color: #3498db; /* Keep status colors */
+}
+.completed .status {
+    color: #2ecc71;
+}
+.in-progress .status {
+    color: #f1c40f;
+}
+
+.icon {
+    margin-right: 5px;
+    font-size: 1.2rem;
 }
