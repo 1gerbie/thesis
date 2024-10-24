@@ -1,0 +1,514 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: maroon;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      .logo-image-container {
+        height: 2em;
+        width: 2em;
+        margin-right: 0.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        color: white;
+
+        span {
+          background-color: white;
+          color: maroon;
+          padding: 5px 10px;
+          border-radius: 7px;
+          font-weight: bold;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin-left: 1rem;
+
+          a, .sign-in-btn, .admin-login-btn {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #f0f0f0;
+            }
+          }
+
+          .admin-login-btn {
+            background-color: white;
+            color: maroon;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+
+            &:hover {
+              background-color: #f0f0f0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 1rem;
+    background-image: url('/backg.png');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5rem;
+
+      .hero-image {
+        flex: 1;
+        max-width: 50%;
+        transform: translateX(170px);
+        img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      .hero-text {
+        flex: 1;
+        padding-left: 2rem;
+        border-radius: 10px;
+        padding: 2rem;
+
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          color: maroon;
+        }
+
+        p {
+          font-size: 1.2rem;
+          color: #333;
+        }
+      }
+    }
+  }
+
+  .features {
+    background-color: #f5f5f5;
+    padding: 2rem;
+
+    h3 {
+      text-align: center;
+      color: maroon;
+      margin-bottom: 2rem;
+    }
+
+    .feature-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .feature-item {
+        flex-basis: calc(25% - 2rem);
+        text-align: center;
+        margin-bottom: 2rem;
+
+        img {
+          width: 64px;
+          height: 64px;
+          margin-bottom: 1rem;
+        }
+
+        h4 {
+          color: maroon;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: #555;
+        }
+      }
+    }
+
+    .testimonials {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      blockquote {
+        font-style: italic;
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      cite {
+        font-weight: bold;
+        color: maroon;
+      }
+    }
+
+    .faq {
+      max-width: 800px;
+      margin: 0 auto;
+
+      details {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 1rem;
+
+        summary {
+          cursor: pointer;
+          font-weight: bold;
+          color: maroon;
+        }
+
+        p {
+          margin-top: 1rem;
+          color: #555;
+        }
+      }
+    }
+
+    .lab-equipment {
+      margin-top: 2rem;
+
+      h3 {
+        text-align: center;
+        color: maroon;
+        margin-bottom: 1rem;
+      }
+
+      .equipment-grid {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .equipment-item {
+          flex-basis: calc(25% - 2rem);
+          text-align: center;
+          margin-bottom: 2rem;
+
+          img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+          }
+
+          h4 {
+            color: maroon;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+            color: #555;
+          }
+        }
+      }
+
+      .view-all-btn {
+        display: block;
+        width: 200px;
+        margin: 2rem auto 0;
+        padding: 0.8rem 1.5rem;
+        background-color: maroon;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: maroon;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .login-page {
+      header {
+        flex-direction: column;
+        text-align: center;
+
+        nav ul {
+          flex-direction: column;
+          margin-top: 1rem;
+
+          li {
+            margin: 0.5rem 0;
+          }
+        }
+      }
+
+      main .hero-content {
+        flex-direction: column;
+
+        .hero-image, .hero-text {
+          flex: none;
+          width: 100%;
+        }
+
+        .hero-text {
+          padding-left: 0;
+          text-align: center;
+          margin-top: 2rem;
+        }
+      }
+
+      .features {
+        .feature-list {
+          .feature-item {
+            flex-basis: 100%;
+          }
+        }
+
+        .lab-equipment {
+          .equipment-grid {
+            .equipment-item {
+              flex-basis: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .login-page {
+      header {
+        .logo h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      main {
+        .hero-content {
+          .hero-text {
+            h2 {
+              font-size: 2rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .features {
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        .feature-item, .equipment-item {
+          h4 {
+            font-size: 1.2rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+
+        .testimonials {
+          blockquote {
+            font-size: 1rem;
+          }
+        }
+
+        .faq {
+          details {
+            summary {
+              font-size: 1rem;
+            }
+
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Enhance accessibility
+  :focus {
+    outline: 2px solid maroon;
+    outline-offset: 2px;
+  }
+
+  // button and link interactions
+  a, button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  //smooth scrolling
+  html {
+    scroll-behavior: smooth;
+  }
+
+  // Improve form styles
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: maroon;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: maroon;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: maroon;
+      }
+    }
+  }
+
+  // Add animations for a more dynamic feel
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+
+  // Apply animations to specific elements
+  .hero-content, .feature-item, .equipment-item {
+    @extend .fade-in;
+  }
+
+  .hero-text h2, .hero-text p {
+    @extend .slide-in;
+  }
+
+  // Improve typography
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    color: maroon;
+  }
+
+  // Add a subtle background pattern
+  .features {
+    background-image: linear-gradient(45deg, #f5f5f5 25%, transparent 25%),
+                      linear-gradient(-45deg, #f5f5f5 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, #f5f5f5 75%),
+                      linear-gradient(-45deg, transparent 75%, #f5f5f5 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  }
+
+  // Improve accessibility for screen readers
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  // Add print styles
+  @media print {
+    .login-page {
+      header, footer, .hero-image {
+        display: none;
+      }
+
+      main {
+        padding: 0;
+      }
+
+      .hero-text, .features {
+        page-break-inside: avoid;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../styles/variables.scss";
+
+.add {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.724);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal {
+        padding: 50px;
+        border-radius: 10px;
+        background-color: $main-color;
+        position: relative;
+        max-width: 800px;
+
+        h1 {
+            margin-bottom: 40px;
+            font-size: 24px;
+            color: $main-bg;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            color:black;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            justify-content: space-between;
+            max-width: 1000px;
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 20px;
+
+                label {
+                    font-size: 14px;
+                }
+
+                input {
+                    padding: 10px;
+                    background-color: transparent;  
+                    color: $main-bg;
+                    outline: none;
+                    border: 1px solid $soft-color;
+                    border-radius: 3px;
+                }
+            }
+
+            button {
+                grid-column: span 3;
+                width: 100%;
+                padding: 10px;
+                cursor: pointer;
+                color: $soft-color;
+            }
+        }
+    }
+}

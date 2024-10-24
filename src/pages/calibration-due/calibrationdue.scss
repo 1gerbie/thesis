@@ -1,0 +1,109 @@
+.calibration-due-container {
+  padding: 60px 40px; /* Increased top and bottom padding */
+  background-color: white;
+  width: 90%; /* Increased width */
+  max-width: 1400px; /* Increased max-width */
+  margin: 0 auto;
+  height: 80vh; /* Added height */
+  overflow-y: auto; /* Added overflow-y */
+}
+
+h1 {
+  text-align: left;
+  color: maroon;
+  margin-bottom: 20px;
+}
+
+.module-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  
+  input, select {
+    padding: 10px;
+    border: 1px solid maroon;
+    border-radius: 5px;
+    color: maroon;
+    flex: 1; /* Flexible width for inputs */
+    min-width: 150px; /* Ensure inputs don't shrink too much */
+  }
+
+  .clear-filters {
+    padding: 10px 15px;
+    background-color: maroon;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #800000;
+    }
+  }
+}
+
+.dataTable {
+  width: 100%; /* Make sure the table fills the container */
+  overflow-x: auto; /* Handle any potential overflow without breaking the layout */
+  background-color: white;
+
+  .status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    &.active {
+      background-color: #28a745;
+      color: white;
+    }
+
+    &.active-overdue {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    &.retired {
+      background-color: #6c757d;
+      color: white;
+    }
+  }
+
+  .action-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: maroon;
+
+    &.edit:hover {
+      color: #800000;
+    }
+
+    &.delete:hover {
+      color: #dc3545;
+    }
+  }
+}
+
+.feature-highlight {
+  margin-top: 30px;
+
+  h3 {
+    color: maroon;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+}

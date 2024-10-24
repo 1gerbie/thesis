@@ -1,0 +1,83 @@
+.reports {
+    padding: 60px 40px; /* Increased top and bottom padding */
+    background-color: white;
+    width: 230%; /* Increased width */
+    max-width: 1400px; /* Increased max-width */
+    margin: 0 auto;
+    height: 80vh; /* Added height */
+    overflow-y: auto; /* Added overflow-y */
+    color: maroon; /* Added text color */
+  }
+  
+  .report-status {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .bottom-boxes {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Space between boxes */
+    width: 100%;
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+  
+  .top-box {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(120, 0, 0);
+    transition: transform 0.2s, box-shadow 0.2s ease;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: maroon; /* Added text color */
+  }
+  
+  .bottom-box {
+    width: 30%; /* Adjust width to ensure all boxes fit in one line */
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 6px 8px rgba(120, 0, 0);
+    transition: transform 0.2s, box-shadow 0.2s ease;
+    padding: 20px;
+    margin: 0 10px; /* Add margin between boxes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: maroon; /* Added text color */
+  
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(98, 1, 1, 0.477);
+    }
+  }
+  
+  .data-table {
+    width: 100%;
+    margin-top: 20px;
+    color: maroon; /* Added text color */
+  }
+  
+  .data-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th,
+  .data-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    color: maroon; /* Added text color */
+  }
+  
+  .data-table th {
+    background-color: #f0f0f0;
+    color: maroon; /* Added text color */
+  }

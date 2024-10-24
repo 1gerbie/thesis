@@ -1,0 +1,275 @@
+.sign-in-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('labb.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  .sign-in-container {
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+    .image-section {
+      flex: 1;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .divider {
+      width: 2px;
+      background-color: maroon;
+    }
+
+    .sign-in {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+
+      .login-icon {
+        text-align: center;
+        margin-bottom: 30px;
+        
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      h2 {
+        margin-bottom: 40px;
+        color: maroon;
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      form {
+        width: 100%;
+        max-width: 450px;
+      }
+
+      .form-group {
+        width: 100%;
+        margin-bottom: 30px;
+
+        label {
+          display: block;
+          margin-bottom: 10px;
+          font-size: 1.3rem;
+          color: #333;
+        }
+
+        input[type="text"], input[type="password"] {
+          width: 100%;
+          padding: 12px 0;
+          border: none;
+          border-bottom: 2px solid maroon;
+          background-color: transparent;
+          transition: border-color 0.3s ease;
+          font-size: 1.1rem;
+
+          &:focus {
+            outline: none;
+            border-color: #ff4500;
+          }
+        }
+
+        &.checkbox {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+
+          input[type="checkbox"] {
+            margin-right: 10px;
+            width: auto;
+          }
+
+          label {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px; // Reduced from 30px
+      
+        button, .back-link {
+          flex: 1;
+          padding: 10px 20px; // Reduced from 15px 25px
+          border-radius: 20px; // Reduced from 25px
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: all 0.3s ease;
+          margin: 0 8px; // Reduced from 10px
+          font-size: 0.9rem; // Reduced from 1.1rem
+          cursor: pointer;
+        }
+      
+        button {
+          background-color: maroon;
+          color: white;
+          border: none;
+      
+          &:hover {
+            background-color: #ff4500;
+            transform: translateY(-2px);
+          }
+        }
+      
+        .back-link {
+          text-align: center;
+          text-decoration: none;
+          color: maroon;
+          border: 2px solid maroon;
+          background-color: white;
+      
+          &:hover {
+            background-color: maroon;
+            color: white;
+            transform: translateY(-2px);
+          }
+        }
+
+        .back-link {
+          flex: 1;
+          text-align: center;
+          padding: 15px 25px;
+          border-radius: 25px;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          transition: all 0.3s ease;
+          margin: 0 10px;
+          font-size: 1.1rem;
+          text-decoration: none;
+          color: maroon;
+          border: 2px solid maroon;
+
+          &:hover {
+            background-color: maroon;
+            color: white;
+            transform: translateY(-2px);
+          }
+        }
+      }
+
+      .error-message {
+        font-size: 1.1rem;
+        margin-top: 25px;
+        color: #ff4500;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .sign-in-wrapper {
+    .sign-in-container {
+      width: 90%;
+      max-width: 800px;
+      height: auto;
+      flex-direction: column;
+
+      .image-section {
+        display: none;
+      }
+
+      .divider {
+        display: none;
+      }
+
+      .sign-in {
+        padding: 40px 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sign-in-wrapper {
+    .sign-in-container {
+      .sign-in {
+        h2 {
+          font-size: 2.5rem;
+        }
+
+        .form-group {
+          label {
+            font-size: 1.2rem;
+          }
+
+          input[type="text"], input[type="password"] {
+            font-size: 1rem;
+          }
+        }
+
+        .button-group {
+          flex-direction: column;
+
+          button, .back-link {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .sign-in-wrapper {
+    .sign-in-container {
+      .sign-in {
+        padding: 30px 15px;
+
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 30px;
+        }
+
+        .form-group {
+          margin-bottom: 20px;
+
+          label {
+            font-size: 1rem;
+          }
+
+          input[type="text"], input[type="password"] {
+            font-size: 0.9rem;
+          }
+        }
+
+        .button-group {
+          button, .back-link {
+            padding: 12px 20px;
+            font-size: 1rem;
+          }
+        }
+
+        .error-message {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
