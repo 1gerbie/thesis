@@ -6,6 +6,8 @@
   margin: 0 auto;
   height: 80vh; /* Added height */
   overflow-y: auto; /* Added overflow-y */
+  border-radius: 10px; /* Added rounded corners for a softer look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
 h1 {
@@ -26,7 +28,7 @@ h1 {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
-  
+
   input, select {
     padding: 10px;
     border: 1px solid maroon;
@@ -34,6 +36,12 @@ h1 {
     color: maroon;
     flex: 1; /* Flexible width for inputs */
     min-width: 150px; /* Ensure inputs don't shrink too much */
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+
+    &:focus {
+      border-color: darkred; /* Change border color on focus */
+      outline: none; /* Remove default outline */
+    }
   }
 
   .clear-filters {
@@ -43,9 +51,10 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 
     &:hover {
-      background-color: #800000;
+      background-color: #800000; /* Darker maroon on hover */
     }
   }
 }
@@ -61,17 +70,17 @@ h1 {
     border-radius: 5px;
 
     &.active {
-      background-color: #28a745;
+      background-color: #28a745; /* Green for active */
       color: white;
     }
 
     &.active-overdue {
-      background-color: #dc3545;
+      background-color: #dc3545; /* Red for overdue */
       color: white;
     }
 
     &.retired {
-      background-color: #6c757d;
+      background-color: #6c757d; /* Gray for retired */
       color: white;
     }
   }
@@ -84,11 +93,11 @@ h1 {
     color: maroon;
 
     &.edit:hover {
-      color: #800000;
+      color: #800000; /* Darker maroon on hover */
     }
 
     &.delete:hover {
-      color: #dc3545;
+      color: #dc3545; /* Red on hover for delete */
     }
   }
 }

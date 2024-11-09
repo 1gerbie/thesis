@@ -14,8 +14,6 @@ function SignIn() {
     if (username === '' && password === '') {
       setError('Invalid username or password');
     } else {
-      // Here you would typically handle the sign-in logic
-      // For now, we'll just navigate to the home page
       navigate('/');
     }
   };
@@ -24,12 +22,12 @@ function SignIn() {
     <div className="sign-in-wrapper">
       <div className="sign-in-container">
         <div className="image-section">
-          {/* Background image will be set in CSS */}
+        <img src="/Labmanager.png" alt="Sign In" />
         </div>
         <div className="divider"></div>
         <div className="sign-in">
           <div className="login-icon">
-            <img src="/path/to/your/icon.png" alt="User Sign In" />
+            <img src="/logo1.png" alt="User Sign In" />
           </div>
           <h2>Sign In</h2>
           <form onSubmit={handleSubmit}>

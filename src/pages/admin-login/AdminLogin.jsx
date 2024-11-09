@@ -30,12 +30,12 @@ function AdminLogin({ handleLogin }) {
     <div className="admin-login-wrapper">
       <div className="admin-login-container">
         <div className="image-section">
-          <img src="/path/to/your/image.jpg" alt="Admin Login" />
+          <img src="/Labmanager.png" alt="Admin Login" />
         </div>
         <div className="divider"></div>
         <div className="admin-login">
           <div className="login-icon">
-            <img src="/path/to/your/icon.png" alt="Admin Login Icon" />
+            <img src="/logo1.png" alt="Admin Login Icon" />
           </div>
           <h2>Admin Login</h2>
           {error && <p className="error-message">{error}</p>}

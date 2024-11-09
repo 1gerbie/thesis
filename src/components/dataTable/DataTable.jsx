@@ -52,9 +52,10 @@ const DataTable = () => {
   ];
   
   
+  
   return (
     <div className="dataTable">
-      <h1>Order Data Table</h1>
+      <h1>Inventory Table</h1>
       <DataGrid
         className="dataGrid"
         rows={rows}

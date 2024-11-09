@@ -23,7 +23,7 @@ const Inventory = () => {
   return (
     <div className="inventory">
       <div className="info">
-        <h1>Inventory</h1>
+        <h1></h1>
         <button onClick={() => setOpen(true)}>Add Items</button>
       </div>
       <DataTable slug="items" columns={columns} rows={itemRows} />

@@ -1,76 +1,77 @@
-
-
 .maintenance-container {
-    padding: 60px 40px; /* Match the increased top and bottom padding */
-    background-color: white; /* Change background to match transactions */
-    border-radius: 10px; /* Keep the border-radius for rounded corners */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow for depth */
-    font-family: 'Roboto', sans-serif;
-    max-width: 1400px; /* Increase to match transactions max-width */
-    width: 230%; /* Match the increased width */
-    height: 80vh; /* Match the height */
-    overflow-y: auto; /* Enable scrolling if content exceeds height */
-    margin: 40px auto; /* Center the box with space above and below */
-    transition: all 0.3s ease; /* Smooth transition for box-shadow adjustments */
+    padding: 60px 40px; /* Increased top and bottom padding */
+    background-color: white; /* White background */
+    width: 230%; /* Match increased width from transactions */
+    max-width: 1400px; /* Increased max-width */
+    margin: 0 auto; /* Center the box horizontally */
+    height: 80vh; /* Added height to match transactions */
+    overflow-y: auto; /* Added overflow-y for scrolling */
+    color: maroon; /* Set text color to match transactions */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Depth shadow */
+    font-family: 'Roboto', sans-serif; /* Font style */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 h2 {
-    text-align: center;
-    color: maroon; /* Match text color */
-    font-size: 1.8rem; /* Keep the font size */
-    margin-bottom: 20px;
+    text-align: center; /* Centered heading */
+    color: maroon; /* Text color */
+    font-size: 2rem; /* Font size */
+    margin-bottom: 20px; /* Space below heading */
 }
 
 .schedule-table {
-    display: flex;
-    flex-direction: column;
-    border-top: 2px solid #e1e1e1;
-    margin-bottom: 20px; /* Adds space below the schedule table */
+    width: 100%; /* Full width for table */
+    margin-top: 20px; /* Space above the table */
+    border-collapse: collapse; /* Collapse borders for table */
 }
 
 .table-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 15px;
-    background-color: #f0f0f0; /* Match header background to transactions */
-    color: maroon; /* Match text color */
-    font-weight: bold;
+    display: flex; /* Flex layout for headers */
+    justify-content: space-between; /* Space out items */
+    padding: 15px; /* Header padding */
+    background-color: #f0f0f0; /* Header background */
+    color: maroon; /* Header text color */
+    font-weight: bold; /* Bold text */
 }
 
 .table-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 18px; /* Keep padding inside each row */
-    border-bottom: 1px solid #e1e1e1;
-    align-items: center;
-    background-color: #fff;
+    display: flex; /* Flex layout for rows */
+    justify-content: space-between; /* Space out items */
+    padding: 15px; /* Row padding */
+    border-bottom: 1px solid #ddd; /* Row separator */
+    align-items: center; /* Center items vertically */
+    background-color: #fff; /* White background for rows */
 
     &:nth-child(even) {
-        background-color: #f7f8fa; /* Keep alternating row color */
+        background-color: #f7f8fa; /* Alternate row color */
     }
 
     &:hover {
-        background-color: #e9eff5; /* Keep hover effect */
+        background-color: #e9eff5; /* Highlight on hover */
     }
 
-    .date, .task, .status {
-        flex: 1;
-        text-align: center; /* Center text for all columns */
-        color: maroon; /* Match text color */
+    .date, .equipment, .task, .status { /* Add equipment to flex */
+        flex: 1; /* Equal space for each column */
+        text-align: center; /* Center text */
+        color: maroon; /* Text color */
+        padding: 10px; /* Padding for table cells */
     }
 }
 
 .upcoming .status {
-    color: #3498db; /* Keep status colors */
+    color: #3498db; /* Color for upcoming status */
 }
+
 .completed .status {
-    color: #2ecc71;
+    color: #2ecc71; /* Color for completed status */
 }
+
 .in-progress .status {
-    color: #f1c40f;
+    color: #f1c40f; /* Color for in-progress status */
 }
 
 .icon {
-    margin-right: 5px;
-    font-size: 1.2rem;
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 1.2rem; /* Icon size */
 }
